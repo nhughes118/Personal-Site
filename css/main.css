@@ -1,0 +1,249 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow: hidden; 
+	height: 100%;
+}
+
+h1 {
+	font-size: xx-large;
+}
+
+h3 {
+	font-size: x-large;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	overflow: hidden;
+	height: 100%;
+	background-image: linear-gradient(45deg, rgb(64, 140, 190) 0%, rgb(64, 140, 190) 7%,rgb(62, 107, 145) 7%, rgb(62, 107, 145) 9%,rgb(49, 99, 131) 9%, rgb(49, 99, 131) 11%,rgb(116, 172, 211) 11%, rgb(116, 172, 211) 26%,rgb(125, 182, 214) 26%, rgb(125, 182, 214) 34%,rgb(40, 90, 136) 34%, rgb(40, 90, 136) 41%,rgb(39, 123, 190) 41%, rgb(39, 123, 190) 100%); 
+	
+}
+
+/* NAV MENU */
+
+#top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 10px auto;
+  width: 120px;
+  height: 60px;
+  background: rgb(64, 140, 190);
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+
+#top-menu a{
+  text-decoration: none;
+  color: white;
+}
+
+#top-menu a:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+#top-menu a:hover:before, #top-menu a:hover:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background: #FDA8CF;
+  border-radius: 50px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+#top-menu a:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+}
+
+/* MAIN CONTENT */
+
+#content {
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	width: 100%;
+}
+
+#content img {
+	padding: 15px 0;
+	height: 35vh;
+	margin: 0 auto;
+}
+
+#content h3 {
+	text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
+}
+
+/* CONTACT PAGE FORM */
+#form-row {
+	border: 2px solid black;
+	width: 35%;
+	margin: 35px auto;
+	background: linear-gradient(100deg, rgba(79, 79, 79, 0.07) 0%, rgba(79, 79, 79, 0.07) 50%,rgba(131, 131, 131, 0.07) 50%, rgba(131, 131, 131, 0.07) 100%),linear-gradient(88deg, rgba(197, 197, 197, 0.03) 0%, rgba(197, 197, 197, 0.03) 50%,rgba(184, 184, 184, 0.03) 50%, rgba(184, 184, 184, 0.03) 100%),linear-gradient(29deg, rgba(211, 211, 211, 0.03) 0%, rgba(211, 211, 211, 0.03) 50%,rgba(4, 4, 4, 0.03) 50%, rgba(4, 4, 4, 0.03) 100%),linear-gradient(162deg, rgba(128, 128, 128, 0.1) 0%, rgba(128, 128, 128, 0.1) 50%,rgba(43, 43, 43, 0.1) 50%, rgba(43, 43, 43, 0.1) 100%),linear-gradient(221deg, rgba(251, 251, 251, 0.02) 0%, rgba(251, 251, 251, 0.02) 50%,rgba(191, 191, 191, 0.02) 50%, rgba(191, 191, 191, 0.02) 100%),linear-gradient(176deg, rgba(74, 74, 74, 0.07) 0%, rgba(74, 74, 74, 0.07) 50%,rgba(198, 198, 198, 0.07) 50%, rgba(198, 198, 198, 0.07) 100%),linear-gradient(236deg, rgba(234, 234, 234, 0.03) 0%, rgba(234, 234, 234, 0.03) 50%,rgba(72, 72, 72, 0.03) 50%, rgba(72, 72, 72, 0.03) 100%),linear-gradient(115deg, rgba(87, 87, 87, 0.08) 0%, rgba(87, 87, 87, 0.08) 50%,rgba(145, 145, 145, 0.08) 50%, rgba(145, 145, 145, 0.08) 100%),linear-gradient(90deg, rgb(23, 169, 215),rgb(236, 81, 93));
+}
+
+#form-row form {
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+
+#form-row form input {
+	border: 1px solid black;
+	display: block;
+	padding: 5px;
+	margin: 10px auto;
+}
+
+#form-row form textarea {
+	border: 1px solid black;
+	resize: none;
+	height: 65px;
+	width: 139px;
+	padding: 5px;
+	display: block;
+	margin: 10px auto;
+}
+
+#contact-info {
+	height: 100px;
+	color: white;
+	text-align: center;
+	padding: 3px;
+}
+
+#contact-info p {
+	display: block;
+}
+
+#num {
+	display: block;
+	margin: 5px;
+}
+
+#mail {
+	display: block;
+	margin: 0;
+}
+
+.contact-icon {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/* THANK YOU GFORM REDIRECT */
+
+#ty-page {
+	padding: 20%;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0px auto;
+	color: white;
+	text-shadow: 0px 0px 15px black
+}
+
+#thank-you {
+	font-size: 1.6em;
+	padding: 30px 5px;
+}
+
+#go-back a{
+	text-decoration: none;
+	color: black;
+}
